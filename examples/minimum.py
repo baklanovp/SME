@@ -1,12 +1,29 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+
+## 
+## conda env create -f environment.yml
+## conda activate pysme 
+## conda install -c anaconda matplotlib pytest  ipywidgets
+## conda install -c conda-forge tqdm colorlog emcee pybtex pre_commit sphinx
+## conda install -c plotly plotly
+## pip install flex-format  wget
+
+## 
+
+
 """ Minimum working example of an SME script
 """
 import os.path
+import sys
 import time
 from ctypes import resize
 
 import matplotlib.pyplot as plt
 import numpy as np
+
+sys.path.append(os.path.expanduser('~/Sn/Release/python/SME/src'))
+
 
 from pysme import sme as SME
 from pysme import util
@@ -18,7 +35,6 @@ from pysme.solve import solve
 from pysme.synthesize import Synthesizer, synthesize_spectrum
 
 if __name__ == "__main__":
-
     # Define the location of all your files
     # this will put everything into the example dir
     target = "sun"
