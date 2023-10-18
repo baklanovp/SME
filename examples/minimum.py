@@ -5,11 +5,14 @@
 ## conda env create -f environment.yml
 ## conda activate pysme 
 ## conda install -c anaconda matplotlib pytest  ipywidgets
-## conda install -c conda-forge tqdm colorlog emcee pybtex pre_commit sphinx
+## conda install -c conda-forge tqdm colorlog emcee pybtex pre_commit sphinx python-wget
 ## conda install -c plotly plotly
-## pip install flex-format  wget
+## pip install flex-format   
 
-## 
+## cd smelib
+## git submodule init 
+## git submodule update
+## conda install -c conda-forge autoconf
 
 
 """ Minimum working example of an SME script
